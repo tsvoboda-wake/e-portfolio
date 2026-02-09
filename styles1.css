@@ -1,0 +1,83 @@
+
+
+/* ---------- Carousel Wrapper ---------- */
+
+.carousel {
+  position: relative;
+}
+
+/* Ensure carousel content stays centered */
+.carousel-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The images that appear inside the MacBook */
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ---------- MacBook Frame Overlay ---------- */
+
+.transparent-frame-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none; /* allows carousel clicks through frame */
+}
+
+/* MacBook image sizing */
+.transparent-frame-overlay img {
+  width: 100%;
+  max-width: 900px; /* controls overall laptop size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------- Indicators ---------- */
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators li {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+/* ---------- Controls ---------- */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* ---------- Responsive Tweaks ---------- */
+
+@media (max-width: 992px) {
+  .transparent-frame-overlay img {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .transparent-frame-overlay img {
+    max-width: 100%;
+  }
+}
