@@ -1874,6 +1874,11 @@ button:not(:disabled),
   height: 30%;
 }
 
+/* Limit size of sliding images within laptop 'border' */
+#samples-carousel .carousel-inner {
+  width: 77%;
+}
+
 .carousel.pointer-event {
   touch-action: pan-y;
 }
@@ -1899,7 +1904,7 @@ button:not(:disabled),
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
-  max-height: 300px; /* Set a fixed height */
+  /* max-height: 300px; Set a fixed height */
   overflow: hidden; /* Hide excess parts of the image */
 }
 
