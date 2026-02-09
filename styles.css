@@ -1974,6 +1974,13 @@ button:not(:disabled),
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }
+
+/* make icons more visible */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
   .carousel-control-next {
