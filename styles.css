@@ -103,6 +103,11 @@ h1, .h1 {
   }
 }
 
+#samples-h1 {
+  width:fit-content;
+  color: #94463a;
+}
+
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
@@ -221,19 +226,11 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
-input,
-button,
-select,
-optgroup,
-textarea {
+button {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-}
-
-button,
-select {
   text-transform: none;
 }
 
@@ -271,11 +268,6 @@ button:not(:disabled),
   display: none !important;
 }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -296,20 +288,6 @@ button:not(:disabled),
 .img-fluid {
   max-width: 100%;
   height: auto;
-}
-
-.figure {
-  display: inline-block;
-}
-
-.figure-img {
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.figure-caption {
-  font-size: 0.875em;
-  color: #6c757d;
 }
 
 .container,
@@ -1297,6 +1275,7 @@ button:not(:disabled),
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  box-shadow: 0 1px 10px black;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -1871,23 +1850,33 @@ button:not(:disabled),
 
 .carousel {
   position: relative;
-  height: 30%;
+  width: 80%;
+  padding-bottom: 5rem; /* Add padding to the bottom to make room for the caption */
 }
 
 /* Limit size of sliding images within laptop 'border' */
 #samples-carousel .carousel-inner {
   width: 77%;
+  overflow:hidden;
+  padding: 0;
+  padding-top: 4.5%;
+}
+
+.external-caption {
+  text-align: center;
+  margin-top: 5rem;
+  padding-bottom: -5rem;
+}
+
+#samples-carousel .carousel-inner .carousel-item img {
+  /* padding-top: -50px; does nothing */
+  /* width: 100%; does nothing */
 }
 
 .carousel.pointer-event {
   touch-action: pan-y;
 }
 
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
 .carousel-inner::after {
   display: block;
   clear: both;
@@ -1895,11 +1884,12 @@ button:not(:disabled),
 }
 
 .carousel-item {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
   display: none;
-  /* object-fit: cover; */
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -1911,7 +1901,7 @@ button:not(:disabled),
 .carousel-item img {
   height: 100%; /* Make the image take up the full height of the item container */
   width: 100%; /* Make the image take up the full width */
-  object-fit: cover; /* Crop and position the image to cover the container while maintaining aspect ratio */
+  /* object-fit: cover; Crop and position the image to cover the container while maintaining aspect ratio... currently does nothing */
   object-position: top center; /* Center the image within the container */
 }
 
@@ -2076,8 +2066,10 @@ button:not(:disabled),
   left: 15%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  color: #fff;
   text-align: center;
+  z-index: 5;
+  color: black;
+  object-position: bottom;
 }
 
 .carousel-dark .carousel-control-prev-icon,
@@ -2091,21 +2083,28 @@ button:not(:disabled),
   color: #000;
 }
 
+/* ----------------------- */
+.this-will-work {
+  position: relative;
+}
+
 .transparent-frame-overlay {
   pointer-events: none;
-  position: relative;
+  position: absolute;
   left: 50%;
+  top:50%;
   transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 10;
+  height: 100%;
+  width:100%;
 }
 
 /* MacBook image sizing */
 .transparent-frame-overlay img {
   width: 100%;
-  max-width: 1000px; /* controls overall laptop size */
+  /* max-width: 1000px; controls overall laptop size */
   height: auto;
 }
-
 
 .clearfix::after {
   display: block;
@@ -2120,7 +2119,7 @@ button:not(:disabled),
 
 .text-bg-secondary {
   color: #fff !important;
-  background-color: RGBA(108, 117, 125, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(148, 70, 58, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-light {
@@ -3126,7 +3125,7 @@ button:not(:disabled),
 
 .text-secondary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-secondary), var(--bs-text-opacity)) !important;
 }
 
 .text-light {
