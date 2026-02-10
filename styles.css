@@ -86,6 +86,7 @@ h1, .h1 {
 #samples-h1 {
   width:fit-content;
   color: #94463a;
+  text-shadow: 1px 1px 3px #fffccf;
 }
 
 h2, .h2 {
@@ -227,6 +228,7 @@ button:not(:disabled),
 .btn-primary {
   background-color: var(--bs-primary);
   color: white;
+  border-color: var(--bs-primary);
 }
 
 @media (min-width: 576px) {
