@@ -687,6 +687,7 @@ button:not(:disabled),
   cursor: default;
 }
 
+/* TODO: FIX, box-shadow creates right-side whitespace */
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
@@ -989,10 +990,16 @@ button:not(:disabled),
 /* ABOUT */
 .full-width-grad-about {
   background-image: linear-gradient(to bottom right, var(--bs-secondary), black);
+  /* TODO: FIX, box-shadow creates right-side whitespace */
   /* TODO: fix, not showing */
   box-shadow: 0 10px 10px black;
   max-height: 400px;
   z-index: 1;
+}
+
+.about {
+  color: white;
+  font-size:larger;
 }
 
 #about-h1 {
@@ -1110,6 +1117,7 @@ button:not(:disabled),
   }
 }
 
+/* FIX: controls jump based on contents */
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
