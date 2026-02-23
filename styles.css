@@ -717,7 +717,7 @@ button:not(:disabled),
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-  box-shadow: 0 1px 10px black;
+  /* box-shadow: 0 1px 10px black; */
   z-index: 2;
 }
 .navbar > .container,
@@ -990,26 +990,34 @@ button:not(:disabled),
 }
 
 /* ABOUT */
-.full-width-grad-about {
-  background-image: linear-gradient(to bottom right, var(--bs-secondary), black);
-  /* TODO: FIX, box-shadow creates right-side whitespace */
-  /* TODO: fix, not showing */
-  box-shadow: 0 10px 10px black;
+.about {
+  /* background-image: linear-gradient(to bottom right, var(--bs-secondary), black); */
+  /* box-shadow: 0 10px 10px black; */
   max-height: 400px;
   z-index: 1;
+  background-color: black;
 }
 
-.about {
-  color: white;
+.about-text {
+  align-content: center;
+}
+
+.about p {
+  /* color: white; */
   font-size:larger;
+  align-content: center;
 }
 
-#about-h1 {
+.about h1 {
   float: left;
-  text-shadow: 1px 1px 3px #fffccf;
+  background-color: #fff2cc;
+  color: var(--bs-primary);
+  font-weight: bold;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
 }
 
 /* TODO make responsive */
+/* TODO align slanted angles of img, headings, etc */
 .about-img {
   max-width: 50%;
   float: right;
@@ -1231,6 +1239,10 @@ button:not(:disabled),
 /* ----------------------- */
 .this-will-work {
   position: relative;
+}
+
+footer {
+  color: var(--bs-secondary);
 }
 
 .transparent-frame-overlay {
