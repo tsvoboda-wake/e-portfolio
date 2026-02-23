@@ -87,6 +87,8 @@ h1, .h1 {
   width:fit-content;
   color: #94463a;
   text-shadow: 1px 1px 3px #fffccf;
+  background-image: linear-gradient(to bottom right, #B68893, #d9d0d2);
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
 }
 
 h2, .h2 {
@@ -2000,10 +2002,6 @@ button:not(:disabled),
 
 .invisible {
   visibility: hidden !important;
-}
-
-.full-width-grad-samples {
-  background-image: linear-gradient(to bottom right, #B68893, white);
 }
 
 @media (min-width: 576px) {
