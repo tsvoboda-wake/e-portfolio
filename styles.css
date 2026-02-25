@@ -276,6 +276,92 @@ button:not(:disabled),
   margin-top: var(--bs-gutter-y);
 }
 
+@media (min-width: 768px) {
+  .col-md {
+    flex: 1 0 0%;
+  }
+  .row-cols-md-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .row-cols-md-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .row-cols-md-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .row-cols-md-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .row-cols-md-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+  .row-cols-md-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+  .col-md-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .col-md-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-md-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-md-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+  .col-md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
 @media (min-width: 992px) {
   .col-lg {
     flex: 1 0 0%;
@@ -689,7 +775,6 @@ button:not(:disabled),
   cursor: default;
 }
 
-/* TODO: FIX, box-shadow creates right-side whitespace */
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
@@ -991,11 +1076,8 @@ button:not(:disabled),
 
 /* ABOUT */
 .about {
-  /* background-image: linear-gradient(to bottom right, var(--bs-secondary), black); */
-  /* box-shadow: 0 10px 10px black; */
-  max-height: 400px;
-  z-index: 1;
-  background-color: black;
+  /* background-color: black; */
+  height: auto;
 }
 
 .about-text {
@@ -1003,8 +1085,8 @@ button:not(:disabled),
 }
 
 .about p {
-  font-size:larger;
   align-content: center;
+  /* color: white; */
 }
 
 .about h1 {
@@ -1015,21 +1097,27 @@ button:not(:disabled),
   clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
 }
 
-/* TODO make responsive */
-/* TODO align slanted angles of img, headings, etc */
 .about-img {
-  max-width: 50%;
-  float: right;
-  max-height: 400px;
   padding: 0;
+  margin: auto;
 }
 
 .about-img img {
-  width: auto;
-  height: 100%;
-  float: right;
-  aspect-ratio: 1;
-  clip-path: polygon(70px 0,100% 0,100% 100%,0 100%);
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  about-img {
+    float: right;
+    padding: 0;
+    max-width: 50%;
+  }
+
+  .about-img img {
+    clip-path: polygon(70px 0,100% 0,100% 100%,0 100%);
+  }
 }
 
 /* SAMPLES */
