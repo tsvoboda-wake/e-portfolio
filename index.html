@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   <title>About</title>
 </head>
-
+<!-- TODO: aria-labels, a11y, AI scraping protection -->
 <body>
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-nav-dark">
@@ -39,18 +39,18 @@
     </div>
   </nav>
   <!-- About Row -->
-   <div class="container mx-auto align-items-center px-0">
-  <div class="row align-items-center about p-4 mx-0" id="about" >
-    <div class="col-md-7 about-text">
-      <h1 class="about px-4 mx-auto mb-4"><i>MEET the DEVELOPER</i></h1>
-      <p class="m-auto w-100 about mb-4">My name is Taylor Svoboda. I&apos;m a front-end developer who
-        creates clean, accessible, and user-focused interfaces for intuitive digital experiences. I&apos;m passionate
-        about security, accessibility, thoughtful design, and writing maintainable code that scales. I aim to create
-        impactful products for real people&apos;s needs.” </p>
+  <div class="container mx-auto align-items-center px-0">
+    <div class="row align-items-center about p-4 mx-0" id="about">
+      <div class="col-md-7 about-text">
+        <h1 class="about px-4 mx-auto mb-4"><i>MEET the DEVELOPER</i></h1>
+        <p class="m-auto w-100 about mb-4">My name is Taylor Svoboda. I&apos;m a front-end developer who
+          creates clean, accessible, and user-focused interfaces for intuitive digital experiences. I&apos;m passionate
+          about security, accessibility, thoughtful design, and writing maintainable code that scales. I aim to create
+          impactful products for real people&apos;s needs.” </p>
+      </div>
+      <div class="about-img col-md-5"><img src="./images/taylor.jpg" /></div>
     </div>
-    <div class="about-img col-md-5"><img src="./images/taylor.jpg" /></div>
   </div>
-</div>
   <!-- Samples Row-->
   <div class="container col-lg-7 m-auto align-items-center pt-5" id="samples">
     <h1 id="samples-h1" class="px-4 m-auto"><i>SAMPLES OF WORK</i></h1>
@@ -137,8 +137,63 @@
   </div>
   <!-- Resume Row -->
   <div class="container col-lg-7 mx-auto align-items-center pt-5" id="resume">
-    <h1 class="resume-h1 px-4 m-auto mb-2"><i>RESUME</i></h1>
-    <p class="text-center">Coming Soon.</p>
+    <h1 class="resume-h1 px-4 m-auto mb-4"><i>RESUME</i></h1>
+    <!-- TODO: make accordions, style -->
+    <h3 class="bold">QUALIFICATIONS SUMMARY</h3>
+    <p>Front-end web developer with hands-on experience in front-end development and a solid foundation in platform
+      engineering and Site Reliability Engineering. Skilled in HTML5, CSS, JavaScript, Typescript, infrastructure
+      provisioning, and application observability. Strong communicator with a passion for scalability, performance, and
+      accessibility.
+    </p>
+    <h3 class="mt-3 bold">EDUCATION</h3>
+    <p class="mb-0">Associate in Applied Science: Information Technology, Web & UX Design
+    </p>
+    <div class="row">
+      <div class="col-md-6">Wake Technical Community College</div>
+      <div class="col-md-6 resume-md-right">Anticipated Dec 2026</div>
+    </div>
+    <h3 class="mt-3 bold">TECHNICAL SKILLS</h3>
+    <!-- TODO: row of icons -->
+    <p><b>Software Tools:</b> UX/UI Design, Jira, Confluence, Git, Webpack, RESTful APIs</p>
+    <p><b>Programming Languages:</b> HTML5, CSS, JavaScript, Typescript, Terraform, Bash</p>
+    <p><b>Additional skills/knowledge:</b> Infrastructure as Code (Terraform), React, Vue, Webpack, Bootstrap, AWS Provisioning and Management  (CF, S3, ECS, EC2), Gitlab CI/CD, Web Design, Debugging, Technical Documentation, Monitoring and Logging  (Dynatrace, DataDog, LogRocket, Splunk), Akamai, Scrum Methodology</p>
+    <h3 class="mt-3 bold">EXPERIENCE</h3>
+    <div class="row">
+      <div class="col-md-6 bold">Senior Front-End Developer</div>
+      <div class="col-md-6 resume-md-right">Jan 2022 - present</div>
+    </div>
+    <p>Ally Bank, Remote</p>
+    <ul>
+      <li>Leveraged third-party observability tooling to monitor site performance, error rates, view session replays,
+        and troubleshoot errors
+        Leveraged Akamai CDN features for site redirects between domains</li>
+      <li>Provisioned infrastructure for a federated application using Terraform, AWS, and GitLab CI</li>
+      <li>Configured scanning for vulnerabilities via GitLab CI and managed vulnerability remediation</li>
+      <li>Supported developer experience through official support channels and hosted Zoom Office Hours on a regular
+        basis</li>
+      <li>Created and maintained the application architecture for a federated application, allowing for more stable,
+        frequent, decoupled releases of front-end features, gated using LaunchDarkly feature flags</li>
+      <li>Deployed and validated Production releases on a two-week cadence in alignment with Agile Sprints</li>
+
+    </ul>
+    <div class="row">
+      <div class="col-md-6 bold">Site Reliability Engineer</div>
+      <div class="col-md-6 resume-md-right">Sept 2019 - Jan 2022</div>
+    </div>
+    <p>Ally Bank, Charlotte, NC</p>
+    <ul>
+      <li>Determined and adhered to Service-Level Objectives, measured via Service-Level Indicators (99th percentile
+        thresholds for errors and performance)</li>
+      <li>Created and maintained dashboards and alerting for entire web data flow (front-end & back-end) for faster
+        incident detection and better mean-time-to-resolution (third-party tools used include Splunk, LogRocket,
+        DataDog, and Dynatrace)</li>
+      <li>Migrated front-end infrastructure from mono-repo in BitBucket deployed via Jenkins and Kubernetes to federated
+        application in GitLab deployed via GitLab CI and Cloud Platform AWS</li>
+      <li>Monitored Production releases on a two-week cadence in alignment with Agile Sprints</li>
+    </ul>
+    <div class="row">
+      <a class="btn btn-primary m-auto download-resume" href="./resume.pdf" target="_blank" download>Download</a>
+    </div>
   </div>
   <footer class="py-5">
     <div class="container px-4 px-lg-5">
