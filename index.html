@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   <title>About</title>
 </head>
-<!-- TODO: aria-labels, a11y, AI scraping protection -->
+<!-- TODO: aria-labels, a11y, AI scraping protection, accordion colors, center profile image on md-down -->
+
 <body>
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-nav-dark">
@@ -33,6 +34,9 @@
           </li>
           <li class="nav-item px-1">
             <a class="nav-link" href="#">Let&#39s Chat</a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link" href="./resume.pdf" target="_blank" download><i>Download Resume</i></a>
           </li>
         </ul>
       </div>
@@ -135,64 +139,124 @@
       </div>
     </div>
   </div>
+  <br />
   <!-- Resume Row -->
   <div class="container col-lg-7 mx-auto align-items-center pt-5" id="resume">
     <h1 class="resume-h1 px-4 m-auto mb-4"><i>RESUME</i></h1>
-    <!-- TODO: make accordions, style -->
-    <h3 class="bold">QUALIFICATIONS SUMMARY</h3>
-    <p>Front-end web developer with hands-on experience in front-end development and a solid foundation in platform
-      engineering and Site Reliability Engineering. Skilled in HTML5, CSS, JavaScript, Typescript, infrastructure
-      provisioning, and application observability. Strong communicator with a passion for scalability, performance, and
-      accessibility.
-    </p>
-    <h3 class="mt-3 bold">EDUCATION</h3>
-    <p class="mb-0">Associate in Applied Science: Information Technology, Web & UX Design
-    </p>
-    <div class="row">
-      <div class="col-md-6">Wake Technical Community College</div>
-      <div class="col-md-6 resume-md-right">Anticipated Dec 2026</div>
-    </div>
-    <h3 class="mt-3 bold">TECHNICAL SKILLS</h3>
-    <!-- TODO: row of icons -->
-    <p><b>Software Tools:</b> UX/UI Design, Jira, Confluence, Git, Webpack, RESTful APIs</p>
-    <p><b>Programming Languages:</b> HTML5, CSS, JavaScript, Typescript, Terraform, Bash</p>
-    <p><b>Additional skills/knowledge:</b> Infrastructure as Code (Terraform), React, Vue, Webpack, Bootstrap, AWS Provisioning and Management  (CF, S3, ECS, EC2), Gitlab CI/CD, Web Design, Debugging, Technical Documentation, Monitoring and Logging  (Dynatrace, DataDog, LogRocket, Splunk), Akamai, Scrum Methodology</p>
-    <h3 class="mt-3 bold">EXPERIENCE</h3>
-    <div class="row">
-      <div class="col-md-6 bold">Senior Front-End Developer</div>
-      <div class="col-md-6 resume-md-right">Jan 2022 - present</div>
-    </div>
-    <p>Ally Bank, Remote</p>
-    <ul>
-      <li>Leveraged third-party observability tooling to monitor site performance, error rates, view session replays,
-        and troubleshoot errors
-        Leveraged Akamai CDN features for site redirects between domains</li>
-      <li>Provisioned infrastructure for a federated application using Terraform, AWS, and GitLab CI</li>
-      <li>Configured scanning for vulnerabilities via GitLab CI and managed vulnerability remediation</li>
-      <li>Supported developer experience through official support channels and hosted Zoom Office Hours on a regular
-        basis</li>
-      <li>Created and maintained the application architecture for a federated application, allowing for more stable,
-        frequent, decoupled releases of front-end features, gated using LaunchDarkly feature flags</li>
-      <li>Deployed and validated Production releases on a two-week cadence in alignment with Agile Sprints</li>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h3 class="accordion-header bold">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne">
+            QUALIFICATIONS SUMMARY
+          </button>
+        </h3>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <p>Front-end web developer with hands-on experience in front-end development and a solid foundation in
+              platform
+              engineering and Site Reliability Engineering. Skilled in HTML5, CSS, JavaScript, Typescript,
+              infrastructure
+              provisioning, and application observability. Strong communicator with a passion for scalability,
+              performance, and
+              accessibility.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header bold">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo">
+            EDUCATION </button>
+        </h3>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="mb-0">Associate in Applied Science: Information Technology, Web & UX Design
+            </p>
+            <div class="row">
+              <div class="col-md-6">Wake Technical Community College</div>
+              <div class="col-md-6 resume-md-right">Anticipated Dec 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header bold">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            TECHNICAL SKILLS </button>
+        </h3>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <!-- TODO: row of icons -->
+            <p><b>Software Tools:</b> UX/UI Design, Jira, Confluence, Git, Webpack, RESTful APIs</p>
+            <p><b>Programming Languages:</b> HTML5, CSS, JavaScript, Typescript, Terraform, Bash</p>
+            <p><b>Additional skills/knowledge:</b> Infrastructure as Code (Terraform), React, Vue, Webpack, Bootstrap,
+              AWS
+              Provisioning and Management (CF, S3, ECS, EC2), Gitlab CI/CD, Web Design, Debugging, Technical
+              Documentation,
+              Monitoring and Logging (Dynatrace, DataDog, LogRocket, Splunk), Akamai, Scrum Methodology</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header bold">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseFour">
+            EXPERIENCE</button>
+        </h3>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6 bold">Senior Front-End Developer</div>
+              <div class="col-md-6 resume-md-right">Jan 2022 - present</div>
+            </div>
+            <p>Ally Bank, Remote</p>
+            <ul>
+              <li>Leveraged third-party observability tooling to monitor site performance, error rates, view session
+                replays,
+                and troubleshoot errors
+                Leveraged Akamai CDN features for site redirects between domains</li>
+              <li>Provisioned infrastructure for a federated application using Terraform, AWS, and GitLab CI</li>
+              <li>Configured scanning for vulnerabilities via GitLab CI and managed vulnerability remediation</li>
+              <li>Supported developer experience through official support channels and hosted Zoom Office Hours on a
+                regular
+                basis</li>
+              <li>Created and maintained the application architecture for a federated application, allowing for more
+                stable,
+                frequent, decoupled releases of front-end features, gated using LaunchDarkly feature flags</li>
+              <li>Deployed and validated Production releases on a two-week cadence in alignment with Agile Sprints</li>
 
-    </ul>
-    <div class="row">
-      <div class="col-md-6 bold">Site Reliability Engineer</div>
-      <div class="col-md-6 resume-md-right">Sept 2019 - Jan 2022</div>
-    </div>
-    <p>Ally Bank, Charlotte, NC</p>
-    <ul>
-      <li>Determined and adhered to Service-Level Objectives, measured via Service-Level Indicators (99th percentile
-        thresholds for errors and performance)</li>
-      <li>Created and maintained dashboards and alerting for entire web data flow (front-end & back-end) for faster
-        incident detection and better mean-time-to-resolution (third-party tools used include Splunk, LogRocket,
-        DataDog, and Dynatrace)</li>
-      <li>Migrated front-end infrastructure from mono-repo in BitBucket deployed via Jenkins and Kubernetes to federated
-        application in GitLab deployed via GitLab CI and Cloud Platform AWS</li>
-      <li>Monitored Production releases on a two-week cadence in alignment with Agile Sprints</li>
-    </ul>
-    <div class="row">
-      <a class="btn btn-primary m-auto download-resume" href="./resume.pdf" target="_blank" download>Download</a>
+            </ul>
+            <div class="row">
+              <div class="col-md-6 bold">Site Reliability Engineer</div>
+              <div class="col-md-6 resume-md-right">Sept 2019 - Jan 2022</div>
+            </div>
+            <p>Ally Bank, Charlotte, NC</p>
+            <ul>
+              <li>Determined and adhered to Service-Level Objectives, measured via Service-Level Indicators (99th
+                percentile
+                thresholds for errors and performance)</li>
+              <li>Created and maintained dashboards and alerting for entire web data flow (front-end & back-end) for
+                faster
+                incident detection and better mean-time-to-resolution (third-party tools used include Splunk, LogRocket,
+                DataDog, and Dynatrace)</li>
+              <li>Migrated front-end infrastructure from mono-repo in BitBucket deployed via Jenkins and Kubernetes to
+                federated
+                application in GitLab deployed via GitLab CI and Cloud Platform AWS</li>
+              <li>Monitored Production releases on a two-week cadence in alignment with Agile Sprints</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row m-4">
+        <a class="btn btn-primary m-auto download-resume" href="./resume.pdf" target="_blank" download>Download</a>
+      </div>
     </div>
   </div>
   <footer class="py-5">
