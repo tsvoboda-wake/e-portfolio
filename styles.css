@@ -41,6 +41,11 @@
   --bs-nav-link-font-size: 1.5rem;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -831,6 +836,11 @@ button:not(:disabled),
   text-decoration: none;
   white-space: nowrap;
 }
+
+.logo {
+  width: fit-content;
+}
+
 .navbar-logo:hover,
 .navbar-logo:focus {
   color: var(--bs-navbar-logo-hover-color);
@@ -848,6 +858,7 @@ button:not(:disabled),
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  white-space: nowrap;
 }
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
@@ -1321,6 +1332,29 @@ button:not(:disabled),
 
 .download-resume {
   width: fit-content;
+}
+
+.accordion {
+  --bs-accordion-btn-color: #471e18;
+  --bs-accordion-btn-focus-box-shadow: #99717b;
+  --bs-accordion-bg: #fff;
+  --bs-accordion-active-bg: #e3c3ca;
+  --bs-accordion-active-color: #471e18;
+  --bs-accordion-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-border-color: #B68893;
+  --bs-accordion-border-width: 1px;
+  --bs-accordion-border-radius: 0.375rem;
+  --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-bg: #e3c3ca;
+  --bs-accordion-btn-icon-width: 1.25rem;
+  --bs-accordion-btn-icon-transform: rotate(-180deg);
+  --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+  --bs-accordion-body-padding-x: 1.25rem;
+  --bs-accordion-body-padding-y: 1rem;
 }
 
 footer {
