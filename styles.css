@@ -217,14 +217,16 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  /* -webkit-appearance: button; */
 }
+
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled) {
   cursor: pointer;
 }
+
 
 ::-moz-focus-inner {
   padding: 0;
@@ -264,6 +266,14 @@ button:not(:disabled),
   background-color: var(--bs-primary);
   color: white;
   border-color: var(--bs-primary);
+  margin: 10px 8px;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  transform: scale(1.1);
+  background-color: #005847;
+  border-color: var(--bs-primary);
+  transition: background-color 0.3s ease; 
 }
 
 @media (min-width: 576px) {
@@ -796,6 +806,8 @@ button:not(:disabled),
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  position: sticky;
+  top: 0;
 }
 
 .nav-link {
@@ -1166,6 +1178,7 @@ button:not(:disabled),
   .about h1 {
     float: left;
   }
+
   .about-img {
     float: right;
     padding-right: 20%;
@@ -1214,6 +1227,7 @@ button:not(:disabled),
   text-align: center;
   margin-top: 5rem;
   padding-bottom: -5rem;
+  height: 15rem;
 }
 
 .carousel.pointer-event {
